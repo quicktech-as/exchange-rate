@@ -17,7 +17,8 @@
     </testsuites>
 
     <php>
-        <env name="API_URI" value=""/>
-        <env name="API_KEY" value=""/>
+        <env name="EXCHANGERATE_DEFAULT_CURRENCY" value="USD"/>
+        <env name="EXCHANGERATE_API_URI" value=""/>
+        <env name="EXCHANGERATE_API_KEY" value=""/>
     </php>
 </phpunit>
