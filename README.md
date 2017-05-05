@@ -30,7 +30,7 @@ Quicktech\ExchangeRate\ExchangeRateServiceProvider::class,
 3) In the same `config/app.php` and add the following to the `aliases ` array: 
 
 ```php
-'ExchangeRate'   => Quicktech\ExchangeRate\Facades\ExchangeRate::class,
+'ExchangeRate' => Quicktech\ExchangeRate\Facades\ExchangeRate::class,
 ```
 
 4) Run the command below to publish the package config file `config/exchange_rate.php`:
@@ -62,11 +62,11 @@ The method above will return the following response:
 
 ```php
 [
-	"AUD" => 1.32230,
-	"BGN" => 1.8096,
-	"BRL" => 3.11,
-	"..." => 1.31135,
-	"..." => 7.473, etc. etc.
+    "AUD" => 1.32230,
+    "BGN" => 1.8096,
+    "BRL" => 3.11,
+    "..." => 1.31135,
+    "..." => 7.473, etc. etc.
 ]
 ```
 ### Convert currency value
