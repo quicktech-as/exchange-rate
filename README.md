@@ -62,11 +62,11 @@ The method above will return the following response:
 
 ```php
 [
-		"AUD" => 1.32230,
-		"BGN" => 1.8096,
-		"BRL" => 3.11,
-		"..." => 1.31135,
-		"..." => 7.473, etc. etc.
+	"AUD" => 1.32230,
+	"BGN" => 1.8096,
+	"BRL" => 3.11,
+	"..." => 1.31135,
+	"..." => 7.473, etc. etc.
 ]
 ```
 ### Convert currency value
