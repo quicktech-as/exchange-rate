@@ -73,7 +73,7 @@ class ExchangeRateManager
      */
     public function convert($amount, $from = null, $to = null)
     {
-        $uri = sprintf('bulk/%s/%s/%s', $this->config('api_key'), $from, $to);
+        $uri = sprintf('pair/%s/%s/%s', $this->config('api_key'), $from, $to);
 
         $request = $this->httpClient->get($uri);
         $content = $request->getBody()->getContents();
