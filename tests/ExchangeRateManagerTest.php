@@ -68,6 +68,20 @@ class ExchangeRateManagerTest extends TestCase
     }
 
     /**
+     * @test
+     */
+    public function convert_value_based_on_from_currency_and_to_currency()
+    {
+        $bodyMock = '{ "result": "success", "from": "USD", "to": "BRL", "rate": 3.11 }';
+        $httpClient = $this->httpClientMock($bodyMock);
+
+        $exchangerate = new ExchangeRateManager($this->config, $httpClient);
+        $value = $exchangerate->convert(2.00, 'USD', 'BRL');
+
+        $this->assertEquals($value, 6.22);
+    }
+
+    /**
      * @return Client
      */
     private function httpClientMock($bodyMock = '')

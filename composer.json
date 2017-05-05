@@ -1,6 +1,6 @@
 {
     "name": "quicktech-as/exchange-rate",
-    "description": "Package Laravel to conversion using exchange rates.",
+    "description": "Package Laravel to currency conversion using ExchangeRate API.",
     "keywords": ["laravel", "illuminate", "currency", "exchange rate"],
     "license": "MIT",
     "authors": [

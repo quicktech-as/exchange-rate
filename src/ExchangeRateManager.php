@@ -62,6 +62,34 @@ class ExchangeRateManager
     }
 
     /**
+     * Format given number.
+     *
+     * @param float  $amount
+     * @param string $from
+     * @param string $to
+     * @param bool   $format
+     *
+     * @return string
+     */
+    public function convert($amount, $from = null, $to = null)
+    {
+        $uri = sprintf('bulk/%s/%s/%s', $this->config('api_key'), $from, $to);
+
+        $request = $this->httpClient->get($uri);
+        $content = $request->getBody()->getContents();
+
+        $response = json_decode($content);
+
+        if ('success' === $response->result) {
+            $value = ($amount * $response->rate);
+
+            return $value;
+        }
+
+        return null;
+    }
+
+    /**
      * Get configuration value.
      *
      * @param string $key
