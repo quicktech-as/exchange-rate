@@ -30,7 +30,7 @@ Quicktech\ExchangeRate\ExchangeRateServiceProvider::class,
 3) In the same `config/app.php` and add the following to the `aliases ` array: 
 
 ```php
-'ExchangeRate' => Quicktech\ExchangeRate\Facades\ExchangeRate::class,
+'ExchangeRate' => Quicktech\ExchangeRate\Facade\ExchangeRate::class,
 ```
 
 4) Run the command below to publish the package config file `config/exchange_rate.php`:
